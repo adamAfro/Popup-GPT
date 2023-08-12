@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css">
+
+    <style>
+  
+      body {
+        padding: 1rem;
+      }
+      input[name=id] { display:none }
+      .buttons { display: flex;gap:1em; }
+      button {width: min-content;}
+  
+      textarea {
+        resize: vertical;
+      }
+  
+    </style>
+  </head>
+
+  <body>
+
+    <button id="addition">+</button>
+
+    <ul id="prompts"></ul>
+
+    <template id="prompt-template">
+
+      <div class="buttons">
+        <input name="id" disabled type="number" value="{id}">
+        <input name="title" type="text" value={title}>
+        <button name="removal">-</button>
+      </div>
+
+      <textarea name="content" cols="30" rows="10">{content}</textarea>
+      
+
+    </template>
+
+    <script src="scripts/options.js"></script>
+  </body>
+
+</html>

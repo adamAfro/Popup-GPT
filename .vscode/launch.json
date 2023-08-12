@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Firefox",
+            "type": "firefox",
+            "request": "launch",
+            "firefoxExecutable": "/home/adam/.firefox-dev/firefox",
+            "addonPath": "${workspaceFolder}",
+            "reAttach": true,
+            "url": "https://www.example.com",
+
+            "reloadOnChange": {
+                "watch": [ 
+                    "${workspaceFolder}/content.js", 
+                    "${workspaceFolder}/background.js", 
+                    "${workspaceFolder}/manifest.json" 
+                ]
+            }
+        }
+    ]
+}
