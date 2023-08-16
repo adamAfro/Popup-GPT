@@ -61,7 +61,7 @@ function getInputs(/**@type {HTMLElement}*/container) {
 async function getLastId() {
 
     /** @type {{prompts: Prompt[]}} */
-    const { prompts } = await getPrompts()
+    const { prompts = [] } = await getPrompts()
 
     return Math.max(...prompts.map(({ id }) => id), 0)
 }

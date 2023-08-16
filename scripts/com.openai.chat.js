@@ -9,7 +9,7 @@ document.documentElement.style.minHeight = "32em";
     const { prompt } = await browser.storage.local.get('prompt')
 
     /** @type {{prompts: Prompt[]}} */
-    const { prompts } = await browser.storage.local.get('prompts')
+    const { prompts = [] } = await browser.storage.local.get('prompts')
 
     /** @type {{selection: string}} */
     const { selection } = await browser.storage.local.get('selection')

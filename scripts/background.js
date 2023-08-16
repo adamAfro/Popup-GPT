@@ -2,7 +2,7 @@
 browser.contextMenus
     .onClicked.addListener(itemsHandler)
 browser.storage.local.get('prompts')
-    .then(({ prompts }) => prompts.map(setPrompt))
+    .then(({ prompts = [] }) => prompts.map(setPrompt))
 
 /** @ts-ignore */
 let lastPromptId = 0
